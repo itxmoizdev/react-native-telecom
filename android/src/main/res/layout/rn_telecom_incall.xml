@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Outgoing + in-call screen (Material You / Pixel style).
+  Host apps can override via res/layout/rn_telecom_incall.xml
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rn_telecom_incall_root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFF7F4EF"
+  android:fitsSystemWindows="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp"
+    android:paddingTop="64dp"
+    android:paddingBottom="32dp">
+
+    <TextView
+      android:id="@+id/rn_telecom_incall_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Calling…"
+      android:textColor="#FF79747E"
+      android:textSize="14sp"
+      android:letterSpacing="0.02" />
+
+    <TextView
+      android:id="@+id/rn_telecom_incall_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center"
+      android:textColor="#FF1C1B1F"
+      android:textSize="32sp"
+      android:textStyle="bold"
+      android:maxLines="2"
+      android:ellipsize="end" />
+
+    <TextView
+      android:id="@+id/rn_telecom_incall_handle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:gravity="center"
+      android:textColor="#FF49454F"
+      android:textSize="16sp" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1" />
+
+    <FrameLayout
+      android:id="@+id/rn_telecom_incall_avatar"
+      android:layout_width="140dp"
+      android:layout_height="140dp"
+      android:background="@drawable/rn_telecom_avatar_circle"
+      android:clipToOutline="true">
+
+      <TextView
+        android:id="@+id/rn_telecom_incall_initials"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+      <ImageView
+        android:id="@+id/rn_telecom_incall_avatar_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1" />
+
+    <!-- Keypad (hidden until toggled) -->
+    <GridLayout
+      android:id="@+id/rn_telecom_keypad"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:columnCount="3"
+      android:visibility="gone" />
+
+    <!-- Control row -->
+    <LinearLayout
+      android:id="@+id/rn_telecom_controls"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <include
+        android:id="@+id/rn_telecom_btn_mute"
+        layout="@layout/rn_telecom_control_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+      <include
+        android:id="@+id/rn_telecom_btn_keypad"
+        layout="@layout/rn_telecom_control_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+      <include
+        android:id="@+id/rn_telecom_btn_speaker"
+        layout="@layout/rn_telecom_control_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+      <include
+        android:id="@+id/rn_telecom_btn_hold"
+        layout="@layout/rn_telecom_control_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/rn_telecom_btn_end"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:clickable="true"
+      android:focusable="true"
+      android:background="?android:attr/selectableItemBackgroundBorderless">
+
+      <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/rn_telecom_decline_circle">
+
+        <ImageView
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_gravity="center"
+          android:contentDescription="@null"
+          android:src="@drawable/rn_telecom_ic_call_end"
+          android:importantForAccessibility="no" />
+      </FrameLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="End"
+        android:textColor="#FF1C1B1F"
+        android:textSize="14sp" />
+    </LinearLayout>
+  </LinearLayout>
+</FrameLayout>

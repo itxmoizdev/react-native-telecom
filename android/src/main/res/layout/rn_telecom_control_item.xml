@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:clickable="true"
+  android:focusable="true"
+  android:background="?android:attr/selectableItemBackgroundBorderless"
+  android:paddingTop="4dp"
+  android:paddingBottom="4dp">
+
+  <FrameLayout
+    android:id="@+id/rn_telecom_control_icon_bg"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/rn_telecom_control_circle">
+
+    <ImageView
+      android:id="@+id/rn_telecom_control_icon"
+      android:layout_width="26dp"
+      android:layout_height="26dp"
+      android:layout_gravity="center"
+      android:contentDescription="@null"
+      android:importantForAccessibility="no" />
+  </FrameLayout>
+
+  <TextView
+    android:id="@+id/rn_telecom_control_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:gravity="center"
+    android:textColor="#FF1C1B1F"
+    android:textSize="12sp" />
+</LinearLayout>
