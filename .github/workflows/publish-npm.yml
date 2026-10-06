@@ -1,0 +1,67 @@
+# Publish to npm via GitHub Actions (Trusted Publishing / OIDC).
+#
+# FIRST PUBLISH (one-time, local — package must exist on npm before OIDC works):
+#   cd react-native-telecom
+#   npm login          # browser + passkey is fine (no authenticator app needed)
+#   npm publish --access public
+#
+# THEN on npmjs.com → package react-native-telecom → Settings → Trusted Publisher:
+#   Organization or user : itxmoizdev
+#   Repository           : react-native-telecom
+#   Workflow filename    : publish-npm.yml
+#   Environment          : (leave blank)
+#   Allow                : npm publish
+#
+# After that, delete any NPM tokens. Future releases:
+#   GitHub → Actions → Publish npm → Run workflow
+#   or: git tag v0.1.1 && git push origin v0.1.1
+
+name: Publish npm
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  id-token: write # required for npm Trusted Publishing (OIDC)
+
+concurrency:
+  group: publish-npm
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
+      - name: Enable Corepack / Yarn
+        run: corepack enable
+
+      - name: Upgrade npm (OIDC needs >= 11.5.1)
+        run: npm install -g npm@latest && npm --version
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build package
+        run: yarn prepare
+
+      - name: Publish
+        # No NODE_AUTH_TOKEN — OIDC Trusted Publisher mints a short-lived credential.
+        # For the very first version, publish once locally with `npm login` + passkey.
+        run: npm publish --access public
+        env:
+          NPM_CONFIG_PROVENANCE: 'true'
