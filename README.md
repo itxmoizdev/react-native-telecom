@@ -7,7 +7,9 @@
 > Looking for **react-native-callkeep**, **CallKeep**, **ConnectionService**, **CallKit-style VoIP UI**, or a **TurboModule telecom** library that works with **React Native New Architecture (Fabric)**? This package is built for that.
 
 [![npm version](https://img.shields.io/npm/v/react-native-telecom.svg)](https://www.npmjs.com/package/react-native-telecom)
-[![license](https://img.shields.io/npm/l/react-native-telecom.svg)](./LICENSE)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-telecom.svg)](https://www.npmjs.com/package/react-native-telecom)
+[![license](https://img.shields.io/github/license/itxmoizdev/react-native-telecom.svg)](./LICENSE)
+[![CI](https://github.com/itxmoizdev/react-native-telecom/actions/workflows/ci.yml/badge.svg)](https://github.com/itxmoizdev/react-native-telecom/actions/workflows/ci.yml)
 [![platform](https://img.shields.io/badge/platform-Android-green.svg)](./docs/android-setup.md)
 [![arch](https://img.shields.io/badge/New%20Architecture-TurboModule-blue.svg)](https://reactnative.dev/docs/the-new-architecture/landing-page)
 

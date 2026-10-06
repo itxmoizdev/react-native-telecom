@@ -22,10 +22,7 @@ const config = {
       [pak.name]: root,
     },
     resolveRequest: (context, moduleName, platform) => {
-      if (
-        moduleName === pak.name ||
-        moduleName.startsWith(`${pak.name}/`)
-      ) {
+      if (moduleName === pak.name || moduleName.startsWith(`${pak.name}/`)) {
         return context.resolveRequest(
           {
             ...context,

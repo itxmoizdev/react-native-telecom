@@ -135,10 +135,7 @@ export function setOnHold(uuid: string, hold: boolean): void {
   NativeTelecom.setOnHold(uuid, hold);
 }
 
-export function setAudioRoute(
-  uuid: string,
-  route: TelecomAudioRoute
-): void {
+export function setAudioRoute(uuid: string, route: TelecomAudioRoute): void {
   assertAndroid();
   NativeTelecom.setAudioRoute(uuid, route);
 }

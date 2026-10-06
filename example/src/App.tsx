@@ -139,8 +139,7 @@ export default function App() {
     };
   }, [log]);
 
-  const demoAvatar =
-    'https://i.pravatar.cc/300?u=react-native-telecom';
+  const demoAvatar = 'https://i.pravatar.cc/300?u=react-native-telecom';
 
   const onIncoming = () => {
     const uuid = createCallId('in');
@@ -161,13 +160,7 @@ export default function App() {
     setActiveCallId(uuid);
     setMuted(false);
     setOnHold(false);
-    Telecom.startCall(
-      uuid,
-      '+15557654321',
-      'Grace Hopper',
-      false,
-      demoAvatar
-    );
+    Telecom.startCall(uuid, '+15557654321', 'Grace Hopper', false, demoAvatar);
     log(`startCall(${uuid})`);
   };
 
