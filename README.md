@@ -298,9 +298,19 @@ It shows **system CallStyle notifications** plus a **Pixel-style full-screen Act
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). Issues and PRs welcome — especially OEM test reports (Vivo, Xiaomi, Oppo, Samsung).
 
+## Contact
+
+| Email | Use |
+|-------|-----|
+| [opensource@itxmoizdev.com](mailto:opensource@itxmoizdev.com) | GitHub / npm package questions |
+| [support@itxmoizdev.com](mailto:support@itxmoizdev.com) | Support for this library |
+| [security@itxmoizdev.com](mailto:security@itxmoizdev.com) | Security reports ([SECURITY.md](./SECURITY.md)) |
+| [business@itxmoizdev.com](mailto:business@itxmoizdev.com) | Freelance / partnerships |
+| [hello@itxmoizdev.com](mailto:hello@itxmoizdev.com) | General / portfolio |
+
 ## License
 
-MIT © [Abdul Moiz](https://github.com/itxmoizdev)
+MIT © [Abdul Moiz](https://github.com/itxmoizdev) · [opensource@itxmoizdev.com](mailto:opensource@itxmoizdev.com)
 
 ---
 

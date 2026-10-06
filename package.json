@@ -75,10 +75,11 @@
     "type": "git",
     "url": "git+https://github.com/itxmoizdev/react-native-telecom.git"
   },
-  "author": "Abdul Moiz <princemoiz664@gmail.com> (https://github.com/itxmoizdev)",
+  "author": "Abdul Moiz <opensource@itxmoizdev.com> (https://github.com/itxmoizdev)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/itxmoizdev/react-native-telecom/issues"
+    "url": "https://github.com/itxmoizdev/react-native-telecom/issues",
+    "email": "opensource@itxmoizdev.com"
   },
   "homepage": "https://github.com/itxmoizdev/react-native-telecom#readme",
   "publishConfig": {

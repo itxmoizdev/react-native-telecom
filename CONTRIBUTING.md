@@ -99,3 +99,9 @@ When you're sending a pull request:
 - Review the documentation to make sure it looks good.
 - Follow the pull request template when opening a pull request.
 - For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+
+## Contact
+
+- Package / GitHub: [opensource@itxmoizdev.com](mailto:opensource@itxmoizdev.com)
+- Support: [support@itxmoizdev.com](mailto:support@itxmoizdev.com)
+- Security: [security@itxmoizdev.com](mailto:security@itxmoizdev.com) (see [SECURITY.md](./SECURITY.md))
