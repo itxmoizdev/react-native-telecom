@@ -1,6 +1,6 @@
 {
   "name": "react-native-telecom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modern react-native-callkeep alternative for React Native New Architecture. Android Jetpack Core-Telecom, CallStyle notifications, lock-screen incoming call UI, VoIP ringtone, mute, hold, DTMF, Bluetooth audio routes, FCM wake. TurboModule. Works with Telnyx, WebRTC, LiveKit.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
